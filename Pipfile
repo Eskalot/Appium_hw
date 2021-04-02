@@ -1,0 +1,16 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+wappium-python-client = "*"
+pytest = "*"
+selenium = "*"
+appium-python-client = "*"
+requests = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"
