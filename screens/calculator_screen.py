@@ -1,5 +1,7 @@
 from appium.webdriver.common.touch_action import TouchAction
-from appium.webdriver.webdriver import RemoteCommand
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions
+from selenium.webdriver.support.wait import WebDriverWait
 
 
 class CalculatorScreen:
@@ -54,6 +56,9 @@ class CalculatorScreen:
 
     def calculate_sinus(self,value_1, value_2):
         self.open_expert_panel()
+        wait = WebDriverWait(self.driver, 15)
+        expert_panel = (By.ID, 'pad_advanced')
+        wait.until(expected_conditions.visibility_of_element_located(expert_panel))
         self.driver.find_element_by_accessibility_id("sine").click()
         self.close_expert_panel()
         self.driver.find_element_by_id(f"digit_{value_1}").click()

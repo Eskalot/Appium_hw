@@ -1,4 +1,3 @@
-import time
 
 class TestCalculator:
 
@@ -38,10 +37,12 @@ class TestCalculator:
 
     def test_close_panel_expert(self, calculator):
         calculator.close_expert_panel()
-        time.sleep(2)
 
 
     def test_calculate_sinus(self,calculator):
+        #time.sleep(2)
         calculator.calculate_sinus(4,5)
         result = calculator.get_result()
         assert float(result) == 0.7071067811
+
+
