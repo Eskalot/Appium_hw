@@ -5,6 +5,10 @@ class TestCalculator:
         calculator.add_values(1, 2)
         result = calculator.get_result()
         assert int(result) == 3
+        """ można też zastosować krótszy kod i zamiast tworzyć zmienną result od razu zastosować asercję:  
+        assert int(calculator.get_result()) == 3
+        """
+
 
     def test_divide_value(self, calculator):
         calculator.divide_values(1, 2)
@@ -40,7 +44,6 @@ class TestCalculator:
 
 
     def test_calculate_sinus(self,calculator):
-        #time.sleep(2)
         calculator.calculate_sinus(4,5)
         result = calculator.get_result()
         assert float(result) == 0.7071067811

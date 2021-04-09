@@ -45,7 +45,6 @@ class CalculatorScreen:
         actions = TouchAction(self.driver)
         actions.tap(x=315, y=1493)
         actions.perform()
-        #self.driver.find_element_by_accessibility_id("arrow").click()
 
 
     def clear_result(self):
